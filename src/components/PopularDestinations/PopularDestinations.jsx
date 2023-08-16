@@ -1,28 +1,27 @@
 import React from "react";
 import styles from "./popularDestinations.module.scss";
-import "../../assets/css/grid.css";
-import { PopularDestinationsItems } from "../../dummyData";
-export default function PopularDestinations() {
+
+export default function PopularDestinations(props) {
+  const { title, description, destinations } = props;
+
   return (
     <div className={styles.container}>
       <div className="grid wide">
-        <div className={styles.title}>Popular Destinations</div>
-        <div className={styles.des}>
-          World's best tourist destinations
-          <div className={styles.items}>
-            <div className="row sm-gutter">
-              {PopularDestinationsItems.map((PopularDestinationsItem) => (
-                <div
-                  key={PopularDestinationsItem.id}
-                  className={`${styles.item} col l-3 c-12`}
-                >
-                  <div className={styles.title}>{PopularDestinationsItem.title}</div>
-                  <div className={styles.image}>
-                    <img src={PopularDestinationsItem.img} alt="Destination"  />
-                  </div>
+        <div className={styles.title}>{title}</div>
+        <div className={styles.des}>{description}</div>
+        <div className={styles.items}>
+          <div className="row sm-gutter">
+            {destinations.map((destination) => (
+              <div
+                key={destination.id}
+                className={`${styles.item} col l-3 c-12`}
+              >
+                <div className={styles.title}>{destination.title}</div>
+                <div className={styles.image}>
+                  <img src={destination.img} alt="Destination"  />
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

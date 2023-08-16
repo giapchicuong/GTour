@@ -16,7 +16,15 @@ import ImportExportIcon from "@mui/icons-material/ImportExport";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-export default function Search() {
+export default function Search(props) {
+  const {
+    title,
+    description,
+    SearchCategoriesItems,
+    SearchSortByDateItems,
+    SearchDestinationItems,
+    SearchMonthItems,
+  } = props;
   const [show, setShow] = useState(false);
   const handleClick = () => {
     setShow(!show);
@@ -26,12 +34,8 @@ export default function Search() {
     <div className={styles.search}>
       <div className="grid wide">
         <div className="row sm-gutter">
-          <div className={`${styles.title} col l-12 c-12`}>
-            Where do you want to go?
-          </div>
-          <div className={`${styles.des} col l-12 c-12`}>
-            Trips, experiences, and places. All in one service
-          </div>
+          <div className={`${styles.title} col l-12 c-12`}>{title}</div>
+          <div className={`${styles.des} col l-12 c-12`}>{description}</div>
           <div className={`${styles.Items}`}>
             <div className="row sm-gutter">
               <div className={`${styles.Item} col l-3 c-12`}>
@@ -46,12 +50,12 @@ export default function Search() {
                 <Box className={styles.Box}>
                   <FormControl fullWidth className={styles.Form}>
                     <InputLabel id="deSearchIconmo-simple-select-label">
-                      Time
+                      Any Month
                     </InputLabel>
                     <Select>
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
+                      {SearchMonthItems.map((SearchMonthItem) => (
+                        <MenuItem>{SearchMonthItem.title}</MenuItem>
+                      ))}
                     </Select>
                   </FormControl>
                   <CalendarMonthIcon className={styles.Icon} />
@@ -60,11 +64,11 @@ export default function Search() {
               <div className={`${styles.Item} col l-3 c-12`}>
                 <Box className={styles.Box}>
                   <FormControl fullWidth className={styles.Form}>
-                    <InputLabel>Time</InputLabel>
+                    <InputLabel>Sort By Date</InputLabel>
                     <Select>
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
+                      {SearchSortByDateItems.map((SearchSortByDateItem) => (
+                        <MenuItem>{SearchSortByDateItem.title}</MenuItem>
+                      ))}
                     </Select>
                   </FormControl>
                   <ImportExportIcon className={styles.Icon} />
@@ -84,9 +88,9 @@ export default function Search() {
                           All Categories
                         </InputLabel>
                         <Select>
-                          <MenuItem value={10}>Ten</MenuItem>
-                          <MenuItem value={20}>Twenty</MenuItem>
-                          <MenuItem value={30}>Thirty</MenuItem>
+                          {SearchCategoriesItems.map((SearchCategoriesItem) => (
+                            <MenuItem>{SearchCategoriesItem.title}</MenuItem>
+                          ))}
                         </Select>
                       </FormControl>
                     </Box>
@@ -96,9 +100,9 @@ export default function Search() {
                       <FormControl fullWidth className={styles.Form}>
                         <InputLabel>Any Destinations</InputLabel>
                         <Select>
-                          <MenuItem value={10}>Ten</MenuItem>
-                          <MenuItem value={20}>Twenty</MenuItem>
-                          <MenuItem value={30}>Thirty</MenuItem>
+                        {SearchDestinationItems.map((SearchDestinationItem) => (
+                            <MenuItem>{SearchDestinationItem.title}</MenuItem>
+                          ))}
                         </Select>
                       </FormControl>
                     </Box>

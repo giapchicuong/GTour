@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./header.module.scss";
-import Logo from "../../assets/images/GTour.png";
-import "../../assets/css/grid.css";
-import { NavbarItems } from "../../dummyData";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import ViewHeadlineIcon from "@mui/icons-material/ViewHeadline";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { Badge } from "@mui/material";
-export default function Header() {
+import Logo from "../../assets/images/GTour.png";
+export default function Header(props) {
+  const {navbarItems, cartBadgeCount } = props;
+
   return (
     <header className={styles.header}>
       <div className="grid wide">
@@ -17,13 +17,13 @@ export default function Header() {
           </div>
           <div className={`${styles.NavMobile} col c-3`}>
             <ViewHeadlineIcon className={styles.MobileIcon} />
-            <Badge badgeContent={4} color="error">
+            <Badge badgeContent={cartBadgeCount} color="error">
               <LocalMallIcon className={styles.cartIcon} />
             </Badge>
           </div>
           <nav className={`${styles.navbar} col l-10 `}>
             <ul className={styles["nav-list"]}>
-              {NavbarItems.map((navbarItem) => (
+              {navbarItems.map((navbarItem) => (
                 <li key={navbarItem.id} className={styles["nav-list-item"]}>
                   {navbarItem.name}
                   <KeyboardArrowDownIcon />
@@ -40,7 +40,7 @@ export default function Header() {
                 </li>
               ))}
               <li className={styles["sub-nav-list-item"]}>
-                <Badge badgeContent={4} color="error">
+                <Badge badgeContent={cartBadgeCount} color="error">
                   <LocalMallIcon className={styles.cartIcon} />
                 </Badge>
               </li>

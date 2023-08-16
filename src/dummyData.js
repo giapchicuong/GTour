@@ -442,7 +442,162 @@ export const NavbarItems = [
       ],
   },
 ];
-
+export const SearchCategoriesItems = [
+  {
+    id: 1,
+    title: "All Categories",
+  },
+  {
+    id: 2,
+    title: "Mountain",
+  },
+  {
+    id: 3,
+    title: "Rural",
+  },
+  {
+    id: 4,
+    title: "Show & Ice",
+  },
+  {
+    id: 5,
+    title: "Wild Life",
+  },
+]
+export const SearchSortByDateItems = [
+  {
+    id: 1,
+    title: "Price Low to Hight",
+  },
+  {
+    id: 2,
+    title: "Price Hight to Low",
+  },
+  {
+    id: 3,
+    title: "Sort By Name",
+  },
+  {
+    id: 4,
+    title: "Sort By Popularity",
+  },
+  {
+    id: 5,
+    title: "Sort By Reviews Score",
+  },
+]
+export const SearchDestinationItems = [
+  {
+    id: 1,
+    title: "Any Destinations",
+  },
+  {
+    id: 2,
+    title: "Tokyo",
+  },
+  {
+    id: 3,
+    title: "Seoul",
+  },
+  {
+    id: 4,
+    title: "Paris",
+  },
+  {
+    id: 5,
+    title: "London",
+  },
+  {
+    id: 6,
+    title: "London",
+  },
+  {
+    id: 7,
+    title: "Venice",
+  },
+  {
+    id: 8,
+    title: "Miami",
+  },
+  {
+    id: 9,
+    title: "Rome",
+  },
+  {
+    id: 10,
+    title: "Prague",
+  },
+  {
+    id: 11,
+    title: "California",
+  },
+  {
+    id: 12,
+    title: "Kyoto",
+  },
+  {
+    id: 13,
+    title: "Hong Kong",
+  },
+  {
+    id: 14,
+    title: "Santorini",
+  },
+]
+export const SearchMonthItems = [
+  {
+    id: 1,
+    title: "Any Month",
+  },
+  {
+    id: 2,
+    title: "January",
+  },
+  {
+    id: 3,
+    title: "February",
+  },
+  {
+    id: 4,
+    title: "March",
+  },
+  {
+    id: 5,
+    title: "April",
+  },
+  {
+    id: 6,
+    title: "May",
+  },
+  {
+    id: 7,
+    title: "June",
+  },
+  {
+    id: 8,
+    title: "July",
+  },
+  {
+    id: 9,
+    title: "August",
+  },
+  {
+    id: 10,
+    title: "September",
+  },
+  {
+    id: 11,
+    title: "October",
+  },
+  {
+    id: 12,
+    title: "November",
+  },
+  {
+    id: 13,
+    title: "December",
+  },
+]
 export const PopularDestinationsItems = [
   {
     id: 1,
