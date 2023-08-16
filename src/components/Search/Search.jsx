@@ -54,7 +54,7 @@ export default function Search(props) {
                     </InputLabel>
                     <Select>
                       {SearchMonthItems.map((SearchMonthItem) => (
-                        <MenuItem>{SearchMonthItem.title}</MenuItem>
+                        <MenuItem value={SearchMonthItem.title}>{SearchMonthItem.title}</MenuItem>
                       ))}
                     </Select>
                   </FormControl>
@@ -67,7 +67,7 @@ export default function Search(props) {
                     <InputLabel>Sort By Date</InputLabel>
                     <Select>
                       {SearchSortByDateItems.map((SearchSortByDateItem) => (
-                        <MenuItem>{SearchSortByDateItem.title}</MenuItem>
+                        <MenuItem value={SearchSortByDateItem.title}>{SearchSortByDateItem.title}</MenuItem>
                       ))}
                     </Select>
                   </FormControl>
@@ -89,7 +89,7 @@ export default function Search(props) {
                         </InputLabel>
                         <Select>
                           {SearchCategoriesItems.map((SearchCategoriesItem) => (
-                            <MenuItem>{SearchCategoriesItem.title}</MenuItem>
+                            <MenuItem value={SearchCategoriesItem.title}>{SearchCategoriesItem.title}</MenuItem>
                           ))}
                         </Select>
                       </FormControl>
@@ -101,7 +101,7 @@ export default function Search(props) {
                         <InputLabel>Any Destinations</InputLabel>
                         <Select>
                         {SearchDestinationItems.map((SearchDestinationItem) => (
-                            <MenuItem>{SearchDestinationItem.title}</MenuItem>
+                            <MenuItem value={SearchDestinationItem.title}>{SearchDestinationItem.title}</MenuItem>
                           ))}
                         </Select>
                       </FormControl>
