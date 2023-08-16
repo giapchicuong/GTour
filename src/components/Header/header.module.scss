@@ -1,0 +1,103 @@
+  @keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+  .header {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    .logo img {
+      max-width: 100px;
+      height: auto;
+    }
+    .NavMobile {
+      
+      display: none;
+    } 
+    .cartIcon {
+      color: #fff;
+    }
+    .navbar {
+      .nav-list {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        .nav-list-item {
+          padding-bottom: 20px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          font-weight: 600;
+          width: 230px;
+          height: auto;
+          &:hover {
+            .sub-nav-list {
+              display: block;
+            }
+          }
+        }
+        &:hover {
+          .sub-nav-list {
+            animation: headerNotifyGrowth ease-in 0.1s;
+            will-change: opacity, transform;
+          }
+        }
+
+        .sub-nav-list {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          padding: 0 10px;
+          list-style: none;
+          border-radius: 5px;
+          .sub-nav-list-item {
+            padding-bottom: 20px;
+            position: relative;
+            color: #fff;
+            font-weight: 450;
+            width: 230px;
+            height: auto;
+            border-bottom: 0.1px solid #999999;
+            color: black;
+            height: 50px;
+            line-height: 50px;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Mobile
+  @media (max-width: 768px) {
+    .NavMobile {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .cartIcon {
+      margin-left: 10px;
+    }
+    .navbar {
+      display: none;
+    }
+  }
+
+  

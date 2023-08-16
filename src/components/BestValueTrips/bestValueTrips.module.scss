@@ -1,0 +1,144 @@
+.container {
+  width: 100%;
+  height: 100%;
+  font-family: Poppins, Helvetica, Arial, sans-serif;
+  padding: 25px 0;
+  .title {
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: none;
+    letter-spacing: 0px;
+    padding: 15px 0;
+    text-align: center;
+  }
+  .des {
+    letter-spacing: 0px;
+    padding-top: 5px;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 15px;
+    color: #8d9199;
+    text-align: center;
+  }
+  .items {
+    padding-top: 50px;
+  }
+  .item {
+    width: 100%;
+    min-height: 380px;
+    border-radius: 5px;
+    border: 1px solid #dce0e0;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    background-color: #f9f9f9;
+    transition-duration: 0.2s;
+    &:hover {
+        -webkit-transform: translateY(-4px);
+        -moz-transform: translateY(-4px);
+        -o-transform: translateY(-4px);
+        -ms-transform: translateY(-4px);
+        transform: translateY(-4px);
+        -webkit-box-shadow: 0 22px 40px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 22px 40px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 22px 40px rgba(0, 0, 0, 0.15);
+        .price{
+          font-size: 20px;
+        }
+      .price .discount {
+        font-size: 20px;
+      }
+    }
+    .text {
+      position: absolute;
+      width: 100%;
+      padding: 15px 15px 15px 15px;
+      text-align: left;
+    }
+    .discount {
+      font-weight: 400;
+      margin-right: 5px;
+      text-decoration: line-through;
+      opacity: 0.6;
+      font-size: 13px;
+    }
+    .price {
+      display: flex;
+      position: absolute;
+      top: -50px;
+      left: 0;
+      background: #ff4a52;
+      padding: 7px 10px 6px 10px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      -webkit-transition-duration: 0.2s;
+      -moz-transition-duration: 0.2s;
+      -o-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+    }
+    .ItemTitle {
+      color: #000000;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0px;
+    }
+    .ItemDes {
+      background: #fff;
+      font-family: "Roboto", "Helvetica Neue", Arial, Verdana, sans-serif;
+      padding: 0;
+      margin: 0;
+      color: #444;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      line-height: 1.7;
+      word-wrap: break-word;
+    }
+
+    .icon {
+      padding-right: 5px;
+    }
+    .image {
+      width: 100%;
+    }
+    .image > img {
+      width: 394px;
+      height: 263px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+    .days {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .reviews {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .ReviewIcon {
+      color: #1ec6b6;
+      font-size: 15px;
+
+      padding-right: 10px;
+    }
+  }
+  // Mobile
+  @media (max-width: 768px) {
+    .title {
+      font-size: 25px;
+    }
+    .item {
+      margin-bottom: 10px;
+      padding: 0 10px;
+    }
+  }
+}
